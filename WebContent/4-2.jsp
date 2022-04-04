@@ -8,10 +8,16 @@
 </head>
 <body>
 
-국어: <%=request.getParameter("kor")%> <br>
-영어: <%=request.getParameter("eng")%> <br>
-수학: <%=request.getParameter("math")%> <br>
+<%int kor = Integer.parseInt(request.getParameter("kor"));%>
+<%int eng = Integer.parseInt(request.getParameter("eng"));%> 
+<%int math = Integer.parseInt(request.getParameter("math"));%> 
+<%int sum = kor+eng+math; %>
+<%float avg = (float)sum/3; %>
 
-
+국어: <%=kor%> <br>
+영어: <%=eng%> <br>
+수학: <%=math%> <br>
+총점: <%=sum%> <br>
+평균: <%=avg%> <br>
 </body>
 </html>
