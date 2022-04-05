@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 가입</title>
+</head>
+<body>
+<form action="SignUp.jsp" method="post">
+	<table>
+	<tr>
+		<td>이름</td>
+		<td><input type="text" name="name"></td>
+	</tr>
+	<tr>
+		<td>ID</td>
+		<td><input type="text" name="id"></td>
+	</tr>
+	<tr>
+		<td>PWD</td>
+		<td><input type="text" name="pwd" size=></td>
+	</tr>
+	<tr>
+		<td>생년월일(ex 2000/00/00</td>
+		<td><input type="text" name="Bday"></td>
+	</tr>
+	<tr>
+		<td>성별</td>
+		<td>
+			<input type="radio" name="gender" value="남" checked>남
+			<input type="radio" name="gender" value="여">여
+	<tr>
+		<td>자기소개</td>
+		<td>
+			<textarea name="AboutMe" cols="40" rows="5"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td>관심언어</td>
+		<td>
+			<input type="checkbox" name="lang" value="PHP">PHP
+			<input type="checkbox" name="lang" value="JSP">JSP
+			<input type="checkbox" name="lang" value="ASP.NET">ASP.NET
+		</td>
+	</tr>		
+	</table>
+	<input type="submit" value="가입">
+</form>
+</body>
+</html>
