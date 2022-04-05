@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시판 글쓰기</title>
+</head>
+<body>
+<form action="Board.jsp" methode="post">
+	<table>
+	<tr>
+		<td>작성자</td>
+		<td><input type="text" name="name" size="50"></td>
+	</tr>
+	<tr>
+		<td>제목</td>
+		<td><input type="text" name="title" size="50"></td>
+	</tr>
+	<tr>
+		<td>내용</td>
+		<td>
+			<textarea name="contents" cols="40" rows="5"></textarea>
+		</td>
+			</tr>		
+	</table>
+	<input type="submit" value="글쓰기">
+</form>
+</body>
+</html>
