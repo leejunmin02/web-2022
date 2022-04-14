@@ -55,7 +55,7 @@ con.close();
     </div>
 	<button type="submit" class="btn btn-primary">변경 저장</button>
 	<button type="button" class="btn btn-primary" onclick="">사용자 삭제</button>
-    <button type="button" class="btn btn-primary" onclick="locatin.href='list.jsp'">사용자 조회</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='list.jsp'">사용자 조회</button>
   </form>
 </div>
 
