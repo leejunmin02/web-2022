@@ -54,8 +54,8 @@ con.close();
       <input type="password" class="form-control" id="pwd" name="pwd" value ="<%=pwd %>">
     </div>
 	<button type="submit" class="btn btn-primary">변경 저장</button>
-	<button type="button" class="btn btn-primary" onclick="">사용자 삭제</button>
-    <button type="button" class="btn btn-primary" onclick="location.href='list.jsp'">사용자 조회</button>
+	<button class="btn btn-primary" onclick="location.href='delete.jsp?id=<%=id%>'">사용자 삭제</button>
+    <button class="btn btn-primary" onclick="location.href='list.jsp'">사용자 조회</button>
   </form>
 </div>
 
