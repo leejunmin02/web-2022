@@ -2,12 +2,17 @@ package cs.dit.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import cs.dit.dao.loginDao;
+import cs.dit.dto.loginDto;
 
 /**
  * Servlet implementation class loginController
@@ -37,13 +42,24 @@ public class loginController extends HttpServlet {
 		out.println(uri.lastIndexOf(".do"));
 		
 		String com = uri.substring(uri.lastIndexOf("/")+1, uri.lastIndexOf(".do"));
-		out.println(com);
+		String dao = loginDao();
+		String viewPage = null;
 		
 		if(com != null && com.trim().equals("list")) {
 			out.println("list로 들어왔어요.");
+			dao = new loginDao();
+			ArrayList<loginDto> dtos = dao.list;
+			request.setAttribute("dtos", dtos);
+			viewPage = "list.jsp";
+			
+			RequestDispatcher rd = request.getRequestDispatcher("list.jsp");
+			rd.forward(request, response);
 		}else if(com != null && com.trim().equals("insertForm")){
 			out.println("insertForm으로  들어왔어요.");
+			viewPage = "insertForm";
 		}
+		RequestDispatcher rd = request.getRequestDispatcher("insertForm.jsp");
+		rd.forward(request, response);
 	}
 
 	/**
